@@ -1,9 +1,8 @@
-//your JS code here. If required.
-
 const squares = document.querySelectorAll(".square");
 
 squares.forEach(currentSquare => {
-  currentSquare.addEventListener("mouseenter", () => {
+
+  currentSquare.addEventListener("mouseover", () => {
     squares.forEach(square => {
       if (square !== currentSquare) {
         square.style.backgroundColor = "#6F4E37"; // Coffee
@@ -11,9 +10,10 @@ squares.forEach(currentSquare => {
     });
   });
 
-  currentSquare.addEventListener("mouseleave", () => {
+  currentSquare.addEventListener("mouseout", () => {
     squares.forEach(square => {
       square.style.backgroundColor = "#E6E6FA"; // Lavender
     });
   });
+
 });
